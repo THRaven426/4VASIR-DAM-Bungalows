@@ -1,0 +1,11 @@
+<figure class="figure">
+    <img src="{{bungalow.image}}" alt="aqui iba una imagen pero oh baia no cargo"class="figure-img img-fluid rounded">
+    <figcaption class="figure-caption">
+      <h5>{{bungalow.title}}
+        <span>{{bungalow.price }}</span>
+      </h5>
+      <p>{{bungalow.description}}</p>
+      <a [routerLink]="['/bungalows', bungalow.id]" class="btn btn-warning">Info</a>
+    </figcaption>
+  </figure>
+  

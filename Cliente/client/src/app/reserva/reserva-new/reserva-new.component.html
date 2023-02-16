@@ -1,0 +1,61 @@
+<div class="card">
+    <div class="card-header">
+        {{pageTitle}}
+    </div>
+
+    <div class="card-body">
+        <form novalidate (ngSubmit)="saveReserva()" [formGroup]="reservaForm">
+
+            <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="fechaEntradaid">Fecha Entrada</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="fechaEntradaid" type="date" placeholder="dd/mm/yyyy"
+                        formControlName="fechaEntrada" name="fechaEntrada" />
+                </div>
+            </div>
+
+            <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="fechaSalidaid">Fecha Salida</label>
+
+                <div class="col-md-8">
+                    <input class="form-control" type="date" id="fechaSalidaid" placeholder="dd/mm/yyyy" formControlName="fechaSalida"
+                        name="fechaSalida" />
+                </div>
+            </div>
+
+
+
+            <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="fechaReservaid">Feacha Reserva</label>
+
+                <div class="col-md-8">
+                    <input class="form-control" type="date" id="fechaReservaid" placeholder="dd/mm/yyyy" formControlName="fechaReserva"
+                        name="fechaReserva" />
+                </div>
+            </div>
+
+            <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="priceId">Price</label>
+
+                <div class="col-md-8">
+                    <input class="form-control" id="priceId" placeholder="price" formControlName="price" name="price" />
+                </div>
+            </div>
+
+            <div class="form-group row mb-2">
+                <div class="offset-md-2 col-md-4">
+                    <button class="btn btn-primary mr-3" type="submit">
+                        Save
+                    </button>
+                    <button class="btn btn-outline-secondary mr-3" type="button" title="Cancel your edits"
+                        [routerLink]="['']">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<figure class="figure">
+    <img src="{{bungalow.image}}" alt="esto era una imagen pero oh baia no cargo" class="figure-img img-fluid rounded">
+    <figcaption class="figure-caption">
+      <h4>Title: {{bungalow.title}}</h4>
+      <h5>Price: {{bungalow.price | currency}}</h5>
+      <h5> Description: {{bungalow.description}}</h5>
+      <h5>peopleCantity: {{bungalow.people_cantity}}</h5>
+    </figcaption>
+  </figure>
+  
+  <div class="row mt-4">
+    <div class="col-md-4">
+      <button class="btn btn-outline-secondary mr-3"
+              style="width:80px"
+              (click)="onBack()">
+        <i class="fa fa-chevron-left"></i> Back
+      </button>
+      <button class="btn btn-outline-primary"
+              style="width:80px"
+              (click)="goEdit()">
+        Edit
+      </button>
+    </div>
+  </div>
+  

@@ -1,0 +1,6 @@
+<div class="row">
+    <h1>LISTA</h1>
+      <div *ngFor="let reserva of reservas" class="col-12 col-md-6  col-lg-4">
+        <app-reserva-item [reserva]="reserva"></app-reserva-item> 
+      </div>
+  </div> 

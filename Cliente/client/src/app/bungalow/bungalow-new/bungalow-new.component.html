@@ -1,0 +1,72 @@
+<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+
+  <div class="card-body">
+    <form novalidate (ngSubmit)="savebungalow()" [formGroup]="bungalowForm">
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label" for="BungalowName">Bungalow Name</label>
+        <div class="col-md-8">
+          <input class="form-control" id="BungalowName" type="text" placeholder="Name (required)"
+            formControlName="title" name="title" />
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label" for="shortdescriptionId">Id zona</label>
+
+        <div class="col-md-8">
+          <input class="form-control" id="idZona" placeholder="idZona" formControlName="idZona" name="idZona" />
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label" for="descriptionId">Descripcion</label>
+
+        <div class="col-md-8">
+          <input class="form-control" id="description" placeholder="description" formControlName="description"
+            name="description" />
+        </div>
+      </div>
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label" for="shortdescriptionId">Price</label>
+
+        <div class="col-md-8">
+          <input class="form-control" id="Price" placeholder="Price" formControlName="price" name="price" />
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label" for="descriptionId">PeopleCantity</label>
+
+        <div class="col-md-8">
+          <input class="form-control" id="peopleCantity" placeholder="peopleCantity" formControlName="peopleCantity"
+            name="peopleCantity" />
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label" for="imageId">Image</label>
+
+        <div class="col-md-8">
+          <input class="form-control" id="image" placeholder="image" formControlName="image" name="image" />
+        </div>
+      </div>
+      <div class="form-group row mb-2">
+        <div class="offset-md-2 col-md-4">
+          <button class="btn btn-primary mr-3" type="submit">
+            Save
+          </button>
+          <button class="btn btn-outline-secondary mr-3" type="button" title="Cancel your edits" [routerLink]="['']">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}
+  </div>
+</div>

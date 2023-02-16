@@ -1,0 +1,12 @@
+<figure class="figure">
+    <figcaption class="figure-caption">
+        <h5>{{reserva.idCliente}}
+        </h5>
+        <h5>{{reserva.id}}
+        </h5>
+        <p>{{reserva.fechaReserva}}</p>
+        <p>{{reserva.fechaEntrada}}</p>
+        <p>{{reserva.fechaSalida}}</p>
+        <a [routerLink]="['/reservas', reserva.id]" class="btn btn-warning">Info</a>
+    </figcaption>
+</figure>
